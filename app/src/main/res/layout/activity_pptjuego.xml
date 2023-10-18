@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".pptjuego">
+
+
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ppt_game_backgroundv2" />
+
+    <ImageButton
+        android:id="@+id/rockbutton"
+        android:layout_width="106dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="236dp"
+        android:layout_marginEnd="288dp"
+        android:adjustViewBounds="true"
+        android:background="#00FFFFFF"
+        android:onClick="rock"
+        android:scaleType="centerInside"
+        android:tag="2"
+        app:layout_constraintEnd_toEndOf="@+id/background"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/background"
+        app:srcCompat="@drawable/piedra" />
+
+    <ImageButton
+        android:id="@+id/paperbutton"
+        android:layout_width="99dp"
+        android:layout_height="84dp"
+        android:layout_marginStart="146dp"
+        android:layout_marginTop="236dp"
+        android:layout_marginEnd="148dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="hola"
+        android:onClick="papel"
+        android:scaleType="fitXY"
+        android:tag="1"
+        android:text="Papel"
+        app:layout_constraintEnd_toEndOf="@+id/background"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="@+id/background"
+        app:layout_constraintTop_toTopOf="@+id/background"
+        app:srcCompat="@drawable/papel_icon" />
+
+    <ImageButton
+        android:id="@+id/scissorsbutton"
+        android:layout_width="101dp"
+        android:layout_height="93dp"
+        android:layout_marginStart="286dp"
+        android:layout_marginTop="228dp"
+        android:layout_marginEnd="10dp"
+        android:background="#00F94B4B"
+        android:onClick="tijeras"
+        android:scaleType="fitXY"
+        android:tag="3"
+        app:layout_constraintEnd_toEndOf="@+id/background"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/background"
+        app:layout_constraintTop_toTopOf="@+id/background"
+        app:srcCompat="@drawable/tijera" />
+
+    <ImageView
+        android:id="@+id/optionIApapel"
+        android:layout_width="182dp"
+        android:layout_height="144dp"
+        android:layout_marginStart="101dp"
+        android:layout_marginTop="536dp"
+        android:layout_marginEnd="101dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/background"
+        app:layout_constraintHorizontal_bias="0.888"
+        app:layout_constraintStart_toStartOf="@+id/background"
+        app:layout_constraintTop_toTopOf="@+id/background"
+        app:srcCompat="@drawable/papel_icon" />
+
+    <ImageView
+        android:id="@+id/optionIApiedra"
+        android:layout_width="188dp"
+        android:layout_height="158dp"
+        android:layout_marginTop="536dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/background"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/background"
+        app:layout_constraintTop_toTopOf="@+id/background"
+        app:srcCompat="@drawable/piedra" />
+
+    <ImageView
+        android:id="@+id/optionIAtijera"
+        android:layout_width="177dp"
+        android:layout_height="149dp"
+        android:layout_marginTop="536dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/background"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/background"
+        app:layout_constraintTop_toTopOf="@+id/background"
+        app:srcCompat="@drawable/tijera" />
+
+    <TextView
+        android:id="@+id/contadorVictorias"
+        android:layout_width="35dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="45dp"
+        android:contentDescription="cantidadVictorias"
+        android:fontFamily="@font/cabin_bold"
+        android:text="0"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/background"
+        app:layout_constraintTop_toTopOf="@+id/background" />
+
+    <TextView
+        android:id="@+id/contadorVictoriasIA"
+        android:layout_width="32dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="350dp"
+        android:layout_marginTop="45dp"
+        android:contentDescription="cantidadVictoriasdeIA"
+        android:fontFamily="@font/cabin_bold"
+        android:text="0"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/background"
+        app:layout_constraintTop_toTopOf="@+id/background" />
+
+    <Button
+        android:id="@+id/botonAbandonar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="112dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="abandonarJuego"
+        android:text="Abandonar Partida"
+        app:layout_constraintBottom_toBottomOf="@+id/background"
+        app:layout_constraintStart_toStartOf="@+id/background" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
