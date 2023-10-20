@@ -15,6 +15,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         inicio()
+        reglas()
         cerrar()
     }
 
@@ -34,6 +35,14 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    fun reglas(){
+        val buttonrules: Button = findViewById(R.id.rules)
+
+        buttonrules.setOnClickListener {
+            val intent: Intent = Intent(this, Rules::class.java)
+            startActivity(intent)
+        }
+    }
 
     fun cerrar(){
         val botonquit: Button = findViewById(R.id.closeapp)
